@@ -1,0 +1,6 @@
+@{
+	ViewData["Title"] = "About page";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewBag.Message</h3>
+<p>This is the about page for our first ASP.NET Core MVC app.</p>
