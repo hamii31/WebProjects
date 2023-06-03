@@ -1,0 +1,27 @@
+@{
+	ViewData["Title"] = "Four Leaf Clover Calculator";
+	int count = (int)ViewData["Count"];
+}
+@if (count > 0)
+{
+<ul class="list-group">
+	@{
+		double seedsPerM2 = 776000 / 675;
+		double totalClovers = (count * seedsPerM2) / 2; // worst case scenario
+		double fourLeafClovers = totalClovers / 5076;
+		<h3>Four-Leaf Clovers in @ViewData["Count"]m2 </h3>
+		<li>@Math.Floor(fourLeafClovers) four-leaf clovers out of @Math.Floor(totalClovers) clovers</li>
+	}
+</ul>
+}
+<form asp-controller="Home" asp-action="FourLeafClover" method="post">
+	<h3>Enter area (m2) </h3>
+	<div class="row">
+		<div class="col-2">
+			<input class="form-control" type="number" min="0" step="1" name="count" />
+		</div>
+		<div class="col-2">
+			<button class="btn-primary">Submit</button>
+		</div>
+	</div>
+</form>
