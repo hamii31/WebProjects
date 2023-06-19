@@ -1,0 +1,29 @@
+@using PowerliftingCalculator.Models.CalculatorViewModel;
+@model CalculatorViewModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Insert your 1 rep maxes in the fields below:</h1>
+      <form asp-action="Total" method="post">
+           <div class="mb-3">
+                 <label asp-for="@Model.Squat1RM" class="form-label">Squat 1RM</label>
+                 <input asp-for="@Model.Squat1RM" class="form-control" />
+                 <span asp-validation-for="@Model.Squat1RM" class="text-danger"></span>
+           </div>
+           <div class="mb-3">
+                 <label asp-for="@Model.Bench1RM" class="form-label">Bench 1RM</label>
+                 <input asp-for="@Model.Bench1RM" class="form-control" />
+                 <span asp-validation-for="@Model.Bench1RM" class="text-danger"></span>
+           </div>
+           <div class="mb-3">
+                 <label asp-for="@Model.Deadlift1RM" class="form-label">Deadlift 1RM</label>
+                 <input asp-for="@Model.Deadlift1RM" class="form-control" />
+                 <span asp-validation-for="@Model.Deadlift1RM" class="text-danger"></span>
+           </div>
+           <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Submit 1RMs" />
+           </div>
+      </form>
+</div>
