@@ -1,2 +1,3 @@
 > implement databases to store personal records
 > implement identity to measure lifter's level based on other lifters's level
+> implement functionality for calculating the user's strength in a specific lift 
