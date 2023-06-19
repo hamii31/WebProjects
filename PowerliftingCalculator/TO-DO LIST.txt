@@ -1,0 +1,2 @@
+> implement databases to store personal records
+> implement identity to measure lifter's level based on other lifters's level
